@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t '.panel_title'.html_safe %>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row user-profile">
+          <%= link_to image_tag "default.jpg" %>
+        </div>
+        <div class="row user-profile">
+          <%= t '.sample_user'.html_safe %>
+        </div>
+        <div class="row user-profile">
+          <%= t '.sample_output'.html_safe %>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <%= link_to "#{t '.button_words'}".html_safe, words_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to "#{t '.button_lessons'}".html_safe, categories_path, class: "btn btn-primary btn-lg" %>
+        </div>
+        <div class="row">
+          <h3><%= t '.activities'.html_safe %></h3>
+          <ul>
+            <% 5.times do %>
+              <li>
+                <%= link_to image_tag "activities.jpg", size: "50x50" %>
+                <%= t '.sample_activities'.html_safe %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
