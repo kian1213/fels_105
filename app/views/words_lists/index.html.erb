@@ -1,11 +1,11 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <%= t '.panel_title'.html_safe %>
+    <%= t ".panel_title".html_safe %>
   </div>
   <div class="panel-body">
     <div class="row wordlist-menu">
       <div class="row wordlist-menu-row">
-        <%= t '.category' %>
+        <%= t ".category" %>
       </div>
       <div class="row wordlist-menu-row">
         <select class="">
@@ -15,9 +15,9 @@
           <option value="leeson4">Super Advance</option>
         </select>
         &nbsp;
-        <%= radio_button_tag 'filter', 'learned' %> <%= t '.learned'.html_safe %>
-        <%= radio_button_tag 'filter', 'not_learned' %> <%= t '.not_learned'.html_safe %>
-        <%= radio_button_tag 'filter', 'all' %> <%= t '.all'.html_safe %>
+        <%= radio_button_tag "filter", "learned" %> <%= t ".learned".html_safe %>
+        <%= radio_button_tag "filter", "not_learned" %> <%= t ".not_learned".html_safe %>
+        <%= radio_button_tag "filter", "all" %> <%= t ".all".html_safe %>
       </div>
       <div class="row wordlist-menu-row">
         <%= link_to "#{t '.filter'}".html_safe, "#", class: "btn btn-default" %>
@@ -30,10 +30,10 @@
           <% 10.times do %>
             <li>
               <div class="col-md-6 category-word-entries">
-                <%= t '.vietnamese_sample'.html_safe %>
+                <%= t ".vietnamese_sample".html_safe %>
               </div>
               <div class="col-md-6 category-word-entries">
-                <%= t '.japanese_sample'.html_safe %>
+                <%= t ".japanese_sample".html_safe %>
               </div>
             </li>
           <% end %>
@@ -44,10 +44,10 @@
           <% 10.times do %>
             <li>
               <div class="col-md-6 category-word-entries">
-                <%= t '.vietnamese_sample'.html_safe %>
+                <%= t ".vietnamese_sample".html_safe %>
               </div>
               <div class="col-md-6 category-word-entries">
-                <%= t '.japanese_sample'.html_safe %>
+                <%= t ".japanese_sample".html_safe %>
               </div>
             </li>
           <% end %>
