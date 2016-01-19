@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :lessons, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
   validates :first_name, presence: true, length: {maximum: 50}
   validates :last_name, presence: true, length: {maximum: 50}
   validates :email, presence: true, length: {maximum: 50},

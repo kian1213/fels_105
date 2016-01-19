@@ -3,5 +3,5 @@ class Word < ActiveRecord::Base
   has_many :answers
   belongs_to :category
 
-  validates :word, presence: true
+  validates :content, presence: true
 end
