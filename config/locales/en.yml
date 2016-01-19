@@ -23,6 +23,18 @@ en:
   layouts:
     application:
       title: Fels105
+    admin:
+      title: Fels105
+      sidebar: Admin Page
+      toggle: Toggle Menu
+  partials_admin:
+    sidebar:
+      side_title: Framgia 105
+      dashboard: Dashboard
+      categories: Categories
+      words: List of words
+      answers: List of answers
+      users: List of users
   home:
     index:
       panel_title: Panel

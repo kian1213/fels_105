@@ -8,6 +8,14 @@ Rails.application.routes.draw do
   get "categories" => "categories#index", as: "categories"
   ## Ill put the resources soon, we'll just finish the static design of the project. Thanks
 
+  namespace :admin do
+    root "dashboard#index" #Partial TODO
+    resources :categories
+    resources :words
+    resources :answers
+    resources :users
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
