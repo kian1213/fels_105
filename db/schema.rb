@@ -15,20 +15,18 @@ ActiveRecord::Schema.define(version: 20160118054441) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "word_id",    limit: 4
-    t.string   "answer",     limit: 255
+    t.string   "content",    limit: 255
+    t.boolean  "correct"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",               limit: 255
-    t.text     "description",        limit: 65535
-    t.string   "image_file_name",    limit: 255
-    t.string   "image_content_type", limit: 255
-    t.integer  "image_file_size",    limit: 4
-    t.datetime "image_updated_at"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.string   "picture",     limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "categories", ["name"], name: "index_categories_on_name", using: :btree
@@ -56,17 +54,14 @@ ActiveRecord::Schema.define(version: 20160118054441) do
   add_index "lessons", ["user_id"], name: "index_lessons_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",          limit: 255
-    t.string   "last_name",           limit: 255
-    t.string   "email",               limit: 255
-    t.string   "password_digest",     limit: 255
-    t.string   "avatar_file_name",    limit: 255
-    t.string   "avatar_content_type", limit: 255
-    t.integer  "avatar_file_size",    limit: 4
-    t.datetime "avatar_updated_at"
-    t.boolean  "admin",                           default: false
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.string   "first_name",      limit: 255
+    t.string   "last_name",       limit: 255
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.string   "avatar",          limit: 255
+    t.boolean  "admin",                       default: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
@@ -74,7 +69,7 @@ ActiveRecord::Schema.define(version: 20160118054441) do
 
   create_table "words", force: :cascade do |t|
     t.integer  "category_id", limit: 4
-    t.string   "word",        limit: 255
+    t.string   "content",     limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
