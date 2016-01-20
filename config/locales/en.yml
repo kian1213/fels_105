@@ -25,9 +25,11 @@ en:
       title: Fels105
     admin:
       title: Fels105
-      sidebar: Admin Page
       toggle: Toggle Menu
   partials_admin:
+    header:
+      title: Admin Page
+      logout: Log out
     sidebar:
       side_title: Framgia 105
       dashboard: Dashboard
@@ -35,6 +37,9 @@ en:
       words: List of words
       answers: List of answers
       users: List of users
+  sessions:
+    new:
+      title: Sign in now
   home:
     index:
       panel_title: Panel
