@@ -66,3 +66,11 @@ en:
       filter: Filter
       vietnamese_sample: Vietnamese
       japanese_sample: Japanese
+  admin:
+    words:
+      index:
+        title: Words List
+        add: ADD
+        list: List
+        content: Content
+        content_category: Content Category
