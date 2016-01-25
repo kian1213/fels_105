@@ -92,7 +92,7 @@ en:
   admin:
     words:
       index:
-        title: Words List
+        title: List of Words
         add: Add
         list: List
         content: Content
@@ -115,3 +115,14 @@ en:
       show_answers:
         list: List of answers
         correct: Correct
+    users:
+      index:
+        title: List of Users
+        name: Full name
+        email: Email Address
+        admin: Admin?
+      show:
+        title: Users
+        name: Full Name
+        email: Email Address
+        admin: Admin
