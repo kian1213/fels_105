@@ -5,6 +5,7 @@ class Admin::WordsController < AdminController
 
   def show
     @word = Word.find params[:id]
+    @word_answers = @word.answers
   end
 
   def new
