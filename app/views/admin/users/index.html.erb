@@ -1,0 +1,74 @@
+<section class="wrapper">
+  <h3>
+    <i class="fa fa-angle-right">
+      <%= t ".title" %>
+    </i>
+  </h3>
+  <div class="row mt">
+    <div class="content-panel">
+      <%= link_to new_admin_user_path, class: "btn btn-success btn-xs
+        pull-right btn-panel" do %>
+        <i class="fa fa-plus-circle">
+          <%= t ".add" %>
+        </i>
+      <% end %>
+      <table class="table table-striped table-advance table-hover">
+        <h4>
+          <i class="fa fa-angle-right">
+            <%= t ".list" %>
+          </i>
+        </h4>
+        <hr>
+        <thead>
+          <tr>
+            <th>
+              <i class="fa fa-text-height">
+                <%= t ".name" %>
+              </i>
+            </th>
+            <th>
+              <i class="fa fa-text-height">
+                <%= t ".email" %>
+              </i>
+            </th>
+            <th>
+              <i class="fa fa-text-height">
+                <%= t ".admin" %>
+              </i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                <%= user.full_name %>
+              </td>
+              <td>
+                <%= user.email %>
+              </td>
+              <td>
+                <%= user.admin? %>
+              </td>
+              <td>
+                <div class="admin-actions">
+                  <%= link_to admin_user_path(user), class: "button btn btn-success btn-xs" do %>
+                    <i class="fa fa-file-text"></i>
+                  <% end %>
+                  <%= link_to edit_admin_user_path(user), class: "button btn btn-primary btn-xs" do %>
+                    <i class="fa fa-pencil"></i>
+                  <% end %>
+                  <%= link_to admin_user_path(user), method: :delete,
+                    data: {confirm: "You want to delete?"},class: "button btn btn-danger btn-xs" do %>
+                    <i class="fa fa-trash-o"></i>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @users %>
+    </div>
+  </div>
+</section>

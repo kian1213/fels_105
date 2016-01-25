@@ -1,6 +1,6 @@
 <section class="wrapper">
   <h3>
-    <%= link_to admin_words_path do %>
+    <%= link_to admin_users_path do %>
       <i class="fa fa-angle-right">
         <%= t ".title" %>
       </i>
@@ -21,28 +21,38 @@
           <div>
             <ul>
               <li>
+                <%= image_tag @user.avatar, size: "150x150" %>
+              </li>
+              <li>
                 <label class="bold">
-                  <%= t ".content" %>
+                  <%= t ".name" %>
                 </label>
                 <span>
-                  <%= @word.content %>
+                  <%= @user.full_name %>
                 </span>
               </li>
               <li>
                 <label class="bold">
-                  <%= t ".content_category" %>
+                  <%= t ".email" %>
                 </label>
                 <span>
-                  <%= @word.category.name %>
+                  <%= @user.email %>
+                </span>
+              </li>
+              <li>
+                <label class="bold">
+                  <%= t ".admin" %>
+                </label>
+                <span>
+                  <%= @user.admin? %>
                 </span>
               </li>
             </ul>
-            <%= render "show_answers" %>
           </div>
           <div class="add-task-row">
-            <%= link_to t(".edit"), edit_admin_word_path(@word),
+            <%= link_to t(".edit"), edit_admin_user_path(@user),
               class: "btn btn-success btn-sm pull-left" %>
-            <%= link_to t(".add"), new_admin_word_path(@word),
+            <%= link_to t(".add"), new_admin_user_path(@user),
               class: "btn btn-default btn-sm pull-right" %>
           </div>
         </div>
