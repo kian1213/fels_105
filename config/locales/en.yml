@@ -21,15 +21,28 @@
 
 en:
   layouts:
+
+  layouts:
     application:
-      title: Fels105
+      app_title: Fels105 Framgia eLearning System
+    header:
+      nav_title: Fels105 Framgia eLearning System
+    footer:
+      small_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
+      button_about: About this Project
     admin:
       title: Fels105
       toggle: Toggle Menu
-  partials_admin:
+    partials_admin:
     header:
       title: Admin Page
       logout: Log out
+      tablink_home: Home
+      tablink_profile: Profile
+      tablink_categories: Categories
+      tablink_results: Results 
+      tablink_login: Login
+      tablink_website: http://www.fragia.com
     sidebar:
       side_title: Framgia 105
       dashboard: Dashboard
@@ -37,6 +50,9 @@ en:
       words: List of words
       answers: List of answers
       users: List of users
+    footer:
+      footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
+      button_about: About this Project
   sessions:
     new:
       title: Sign in now
@@ -49,6 +65,13 @@ en:
       button_lessons: Lessons
       activities: Activities
       sample_activities: Learned 20 words in Lessons "Basic 500"-(2013/11/06)
+    signup:
+      signup_welcome: Welcome to Framgia eLearning System
+      signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
+      signup_button: Free Language Learning - Sign up now!
+    about:
+      about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
+      about_text: Framgia eLearning System is a FREE languange learning tool online. 
   categories:
     index:
       panel_title: Panel
@@ -73,4 +96,26 @@ en:
         add: Add
         list: List
         content: Content
+<<<<<<< HEAD
         content_category: Content Category
+=======
+        content_category: Content Category
+      show:
+        title: Word
+        content: Content
+        content_category: Content Category
+      new:
+        title: Add Word
+      edit:
+        title: Add Word
+      form:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+        list_of_answers: List of Answers
+      answer_fields:
+        answer: Answer
+        remove: Remove
+      show_answers:
+        list: List of answers
+        correct: Correct
+>>>>>>> 6ef6d43... add edit and update for admin words
