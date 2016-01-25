@@ -21,8 +21,6 @@
 
 en:
   layouts:
-
-  layouts:
     application:
       app_title: Fels105 Framgia eLearning System
     header:
@@ -33,23 +31,15 @@ en:
     admin:
       title: Fels105
       toggle: Toggle Menu
-    partials_admin:
     header:
       title: Admin Page
       logout: Log out
       tablink_home: Home
       tablink_profile: Profile
       tablink_categories: Categories
-      tablink_results: Results 
+      tablink_results: Results
       tablink_login: Login
       tablink_website: http://www.fragia.com
-    sidebar:
-      side_title: Framgia 105
-      dashboard: Dashboard
-      categories: Categories
-      words: List of words
-      answers: List of answers
-      users: List of users
     footer:
       footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
       button_about: About this Project
@@ -71,7 +61,7 @@ en:
       signup_button: Free Language Learning - Sign up now!
     about:
       about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
-      about_text: Framgia eLearning System is a FREE languange learning tool online. 
+      about_text: Framgia eLearning System is a FREE languange learning tool online.
   categories:
     index:
       panel_title: Panel
@@ -89,6 +79,16 @@ en:
       filter: Filter
       vietnamese_sample: Vietnamese
       japanese_sample: Japanese
+  partials_admin:
+    header:
+      title: Admin
+    sidebar:
+      side_title: Framgia 105
+      dashboard: Dashboard
+      categories: Categories
+      words: List of words
+      answers: List of answers
+      users: List of users
   admin:
     words:
       index:
@@ -97,3 +97,21 @@ en:
         list: List
         content: Content
         content_category: Content Category
+      show:
+        title: Word
+        content: Content
+        content_category: Content Category
+      new:
+        title: Add Word
+      edit:
+        title: Edit Word
+      form:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+        list_of_answers: List of Answers
+      answer_fields:
+        answer: Answer
+        remove: Remove
+      show_answers:
+        list: List of answers
+        correct: Correct
