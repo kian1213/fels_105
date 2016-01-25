@@ -40,7 +40,7 @@ en:
       tablink_home: Home
       tablink_profile: Profile
       tablink_categories: Categories
-      tablink_results: Results 
+      tablink_results: Results
       tablink_login: Login
       tablink_website: http://www.fragia.com
     sidebar:
@@ -97,3 +97,21 @@ en:
         list: List
         content: Content
         content_category: Content Category
+      show:
+        title: Word
+        content: Content
+        content_category: Content Category
+      new:
+        title: Add Word
+      edit:
+        title: Edit Word
+      form:
+        add_answer: Add Answer
+        add_new_answer: Add a new Answer
+        list_of_answers: List of Answers
+      answer_fields:
+        answer: Answer
+        remove: Remove
+      show_answers:
+        list: List of answers
+        correct: Correct
