@@ -102,7 +102,7 @@ en:
         content: Content
         content_category: Content Category
       new:
-        title: Add Word
+        title: Create Word
       edit:
         title: Edit Word
       form:
@@ -126,3 +126,5 @@ en:
         name: Full Name
         email: Email Address
         admin: Admin
+      new:
+        title: Create User
