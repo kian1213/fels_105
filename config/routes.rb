@@ -3,18 +3,19 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root    "home#signup"
-  get     "home"        => "home#index", as: "home"
+  root    "home#index"
   get     "about"       => "home#about", as: "about"
   get     "words"       => "words#index", as: "words"
   get     "categories"  => "categories#index", as: "categories"
+  get     "signup"      => "users#new"
   get     "login"       => "sessions#new"
   post    "login"       => "sessions#create"
   delete  "logout"      => "sessions#destroy"
-  ## Ill put the resources soon, we'll just finish the static design of the project. Thanks
+
+  resources :users
 
   namespace :admin do
-    root "dashboard#index" #Partial TODO
+    root "dashboard#index"
     resources :categories
     resources :words
     resources :answers
