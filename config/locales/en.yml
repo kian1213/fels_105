@@ -49,24 +49,22 @@ en:
   home:
     index:
       panel_title: Panel
-      sample_user: Johnny
       sample_output: Learned 200 words
       button_words: Words
       button_lessons: Lessons
       activities: Activities
-      sample_activities: Learned 20 words in Lessons "Basic 500"-(2013/11/06)
-    signup:
       signup_welcome: Welcome to Framgia eLearning System
       signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
       signup_button: Free Language Learning - Sign up now!
     about:
       about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
       about_text: Framgia eLearning System is a FREE languange learning tool online.
+  users:
+    new:
+      title: Sign Up
   categories:
     index:
       panel_title: Panel
-      category_title_sample: Basic 500
-      category_desc_sample: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
       start: Start
   words_lists:
     index:
@@ -89,6 +87,9 @@ en:
       words: List of words
       answers: List of answers
       users: List of users
+  users:
+    create:
+      success: Welcome to Framgia eLearning System!
   admin:
     words:
       index:
