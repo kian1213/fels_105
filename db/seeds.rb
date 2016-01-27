@@ -16,7 +16,9 @@ User.create!(
   password: "admin123",
   password_confirmation: "admin123",
   avatar: seed_image("default.jpg"),
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 puts "Done creating default user"
 
