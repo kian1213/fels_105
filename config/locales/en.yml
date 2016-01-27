@@ -36,9 +36,11 @@ en:
       logout: Log out
       tablink_home: Home
       tablink_profile: Profile
-      tablink_categories: Categories
-      tablink_results: Results
+      tablink_account: Account
+      tablink_setting: Settings
+      tablink_users: Users
       tablink_login: Login
+      tablink_logout: Logout
       tablink_website: http://www.fragia.com
     footer:
       footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
@@ -46,6 +48,8 @@ en:
   sessions:
     new:
       title: Sign in now
+      remember: Remember me on this computer
+      submit: Sign in
   home:
     index:
       panel_title: Panel
@@ -59,9 +63,6 @@ en:
     about:
       about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
       about_text: Framgia eLearning System is a FREE languange learning tool online.
-  users:
-    new:
-      title: Sign Up
   categories:
     index:
       panel_title: Panel
@@ -90,6 +91,14 @@ en:
   users:
     create:
       success: Welcome to Framgia eLearning System!
+    update:
+      success: Profile successfully updated!
+    new:
+      title: Sign Up
+    show:
+      panel_title: Panel
+      button_words: Words
+      button_lessons: Lessons
   admin:
     words:
       index:

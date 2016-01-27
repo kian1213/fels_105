@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118054441) do
+ActiveRecord::Schema.define(version: 20160126091504) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "word_id",    limit: 4
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160118054441) do
     t.boolean  "admin",                       default: false
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
+    t.string   "remember_digest", limit: 255
   end
 
   add_index "users", ["first_name"], name: "index_users_on_first_name", using: :btree
