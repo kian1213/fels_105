@@ -45,11 +45,6 @@ en:
     footer:
       footer_title: Training Project by Grace Sojor and Christian Angel Galamay from Framgia Philippines
       button_about: About this Project
-  sessions:
-    new:
-      title: Sign in now
-      remember: Remember me on this computer
-      submit: Sign in
   home:
     index:
       panel_title: Panel
@@ -91,6 +86,7 @@ en:
   users:
     create:
       success: Welcome to Framgia eLearning System!
+      info: Please check your email to activate your account.
     update:
       success: Profile successfully updated!
     new:
@@ -99,6 +95,25 @@ en:
       panel_title: Panel
       button_words: Words
       button_lessons: Lessons
+  sessions:
+    create:
+      not_activated: Account not activated.
+      check_email: Check your email for the activation link.
+      invalid: Invalid email/password combination
+    new:
+      title: Sign in now
+      remember: Remember me on this computer
+      submit: Sign in
+  account_activations:
+    edit:
+      valid: Account activated!
+      invalid: Invalid activation link
+  user_mailer:
+    account_activation:
+      subject: Account activation
+      title: Framgia
+      message: Welcome to the Framgia eLearning! Click on the link below to activate your account
+      activate: Activate
   admin:
     words:
       index:
