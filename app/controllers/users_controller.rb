@@ -12,11 +12,26 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      login @user
+      @user.send_activation_email
+      flash[:info] = t ".info"
+      redirect_to root_url
+    else
+      render "new"
+    end
+  end
+
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    @user = User.find params[:id]
+
+    if @user.update_attributes user_params
       flash[:success] = t ".success"
       redirect_to @user
     else
-      render "new"
+      render "edit"
     end
   end
 
