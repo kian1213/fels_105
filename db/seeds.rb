@@ -27,7 +27,7 @@ puts "Done creating default user"
   Category.create(
     name: Faker::Name.title,
     description: Faker::Lorem.paragraph,
-    picture: Faker::Avatar.image
+    picture: seed_image("category.jpg")
   )
 end
 puts "Done creating categories"
