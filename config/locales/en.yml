@@ -60,8 +60,14 @@ en:
       about_text: Framgia eLearning System is a FREE languange learning tool online.
   categories:
     index:
-      panel_title: Panel
+      panel_title: Categories
       start: Start
+  lessons:
+    edit:
+      panel_title: Lesson
+  results:
+    show:
+      panel_title: Results
   words_lists:
     index:
       panel_title: Panel

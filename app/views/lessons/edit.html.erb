@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="word">
+          <h1>
+            <b><%= @lesson_word.word.content%></b>
+          </h1>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <% @answers.each do |answer| %>
+            <li>
+              <%= link_to answer.content, lesson_path(lesson_word_id: @lesson_word.id, answer_id: answer.id), method: :put,
+                class: "btn btn-success answers" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
