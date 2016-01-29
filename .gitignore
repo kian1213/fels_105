@@ -4,6 +4,7 @@
 capybara-*.html
 .rspec
 .rvmrc
+.byebug_history
 /.bundle
 /vendor/bundle
 /log/*

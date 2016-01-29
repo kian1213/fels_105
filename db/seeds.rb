@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-def seed_image(file_name)
+def seed_image file_name
   File.open(File.join(Rails.root, "/app/assets/images/seed/#{file_name}"))
 end
 
@@ -32,7 +32,7 @@ puts "Done creating default user"
 end
 puts "Done creating categories"
 
-3.times do |word|
+50.times do |word|
   Word.create(
     category_id: Category.first.id,
     content: Faker::Lorem.word
@@ -42,7 +42,7 @@ puts "Done creating words"
 
 word_id = 1
 answers = []
-while word_id < 4
+while word_id < 51
   3.times do
     list = {
         word_id: Word.find(word_id).id,

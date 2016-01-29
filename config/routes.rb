@@ -6,13 +6,16 @@ Rails.application.routes.draw do
   root    "home#index"
   get     "about"       => "home#about", as: "about"
   get     "words"       => "words#index", as: "words"
-  get     "categories"  => "categories#index", as: "categories"
   get     "signup"      => "users#new"
   get     "login"       => "sessions#new"
+  get     "/results/:id", to: "results#show", as: "result"
   post    "login"       => "sessions#create"
   delete  "logout"      => "sessions#destroy"
 
   resources :users
+  resources :categories
+  resources :lessons
+  resources :lesson_words
   resources :account_activations, only: [:edit]
 
   namespace :admin do
