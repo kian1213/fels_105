@@ -3,10 +3,14 @@ class Lesson < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
 
-  accepts_nested_attributes_for :lesson_words, reject_if:
-    lambda {|a| a[:content].blank?}, allow_destroy: true
+  accepts_nested_attributes_for :lesson_words, allow_destroy: true
 
   after_create :generate_words
+
+  def next_is_nil? lesson_word_id
+    @next_word = self.lesson_words.where("id > ?", lesson_word_id)
+    @next_word.empty?
+  end
 
   private
   def generate_words

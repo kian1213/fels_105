@@ -55,6 +55,8 @@ en:
       signup_welcome: Welcome to Framgia eLearning System
       signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
       signup_button: Free Language Learning - Sign up now!
+      learn: Learn
+      words: words in
     about:
       about_desc: This is a training project by Grace Sojor and Christian Angel Galamay from Framgia Philippines.
       about_text: Framgia eLearning System is a FREE languange learning tool online.
@@ -68,6 +70,9 @@ en:
   results:
     show:
       panel_title: Results
+      lesson_by: Lesson by
+      lesson_category: Lesson Category
+      result: Result
   words_lists:
     index:
       panel_title: Panel
@@ -101,6 +106,8 @@ en:
       panel_title: Panel
       button_words: Words
       button_lessons: Lessons
+      learn: Learn
+      words: words in
   sessions:
     create:
       not_activated: Account not activated.

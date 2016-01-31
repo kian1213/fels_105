@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <%= t ".panel_title".html_safe %>
+    <%= t ".panel_title" %>
   </div>
   <div class="panel-body">
     <div class="row">
@@ -12,7 +12,7 @@
           <%= @user.full_name %>
         </div>
         <div class="row user-profile">
-          <%= t ".sample_output".html_safe %>
+          <%= t ".sample_output" %>
         </div>
       </div>
       <div class="col-md-8">
@@ -21,9 +21,17 @@
           <%= link_to t(".button_lessons"), categories_path, class: "btn btn-primary btn-lg" %>
         </div>
         <div class="row">
-          <h3><%= t ".activities".html_safe %></h3>
+          <h3><%= t ".activities" %></h3>
           <ul>
-
+            <% @lessons.each do |lesson| %>
+                <li>
+                  <%= link_to t(".learn"), result_path(lesson)  %>
+                  <%= lesson.result %>
+                  <%= t ".words" %>
+                  <%= lesson.category.name %>
+                  <%= dateformat lesson.created_at %>
+                </li>
+            <% end %>
           </ul>
         </div>
       </div>

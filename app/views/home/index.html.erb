@@ -24,7 +24,15 @@
           <div class="row">
             <h3><%= t ".activities".html_safe %></h3>
             <ul>
-
+              <% @lessons.each do |lesson| %>
+                <li>
+                  <%= link_to t(".learn"), result_path(lesson)  %>
+                  <%= lesson.result %>
+                  <%= t ".words" %>
+                  <%= lesson.category.name %>
+                  <%= dateformat lesson.created_at %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

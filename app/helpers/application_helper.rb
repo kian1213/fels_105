@@ -13,4 +13,8 @@ module ApplicationHelper
     link_to name, "#", onclick: h("add_fields(this, \"#{association}\",
       \"#{escape_javascript(fields)}\")"), class: cssClass, title: title, remote: true
   end
+
+  def dateformat date
+    date.strftime("%Y/%d/%m")
+  end
 end
