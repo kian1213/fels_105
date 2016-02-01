@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <%= t ".panel_title".html_safe %>
+    <%= t ".panel_title" %>
   </div>
   <div class="panel-body">
     <% @categories.each do |cat| %>
@@ -16,7 +16,7 @@
             <br>
             <%= cat.description%>
             <br>
-            <%= link_to t(".start"), "#", class: "btn btn-success" %>
+            <%= link_to t(".start"), lessons_path(category_id: cat.id), class: "btn btn-success" %>
           </div>
         </div>
       <% else %>
@@ -28,7 +28,7 @@
             <br>
             <%= cat.description%>
             <br>
-            <%= link_to t(".start"), "#", class: "btn btn-success" %>
+            <%= link_to t(".start"), lessons_path(category_id: cat.id), method: :post, class: "btn btn-success" %>
           </div>
           <div class="col-md-6 category-picture">
             <%= image_tag cat.picture, size: "350x150" %>
