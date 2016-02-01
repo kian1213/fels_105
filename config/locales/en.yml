@@ -52,6 +52,9 @@ en:
       button_words: Words
       button_lessons: Lessons
       activities: Activities
+      learn: Learn
+      words: words in
+    signup:
       signup_welcome: Welcome to Framgia eLearning System
       signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
       signup_button: Free Language Learning - Sign up now!
@@ -95,6 +98,8 @@ en:
       panel_title: Panel
       button_words: Words
       button_lessons: Lessons
+      learn: Learn
+      words: words in
   sessions:
     create:
       not_activated: Account not activated.
