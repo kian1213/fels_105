@@ -13,4 +13,12 @@ module ApplicationHelper
     link_to name, "#", onclick: h("add_fields(this, \"#{association}\",
       \"#{escape_javascript(fields)}\")"), class: cssClass, title: title, remote: true
   end
+
+  def datetime date
+    I18n.l date, format: :short
+  end
+
+  def activity_image_tag id
+    image_tag User.find(id).avatar, size: "50x50"
+  end
 end
