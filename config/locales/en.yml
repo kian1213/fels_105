@@ -174,6 +174,8 @@ en:
         no_items_found: "SEARCH RESULT: THERE ARE NO CATEGORY ITEMS FOUND."
       show: 
         title: Category
+        name: Category Name
+        desc: Category Description
       new:
         title: Add New Category
         new_category: New Category
@@ -184,6 +186,6 @@ en:
         title: Edit the Category
 errors:
   messages:
-    carrierwave_processing_error: 'Cannot resize image.'
-    carrierwave_integrity_error: 'Not an image.'
-    carrierwave_download_error: 'Couldn't download image.'
+    carrierwave_processing_error: "Cannot resize image."
+    carrierwave_integrity_error: "Not an image."
+    carrierwave_download_error: "Couldn't download image."

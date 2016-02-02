@@ -2,18 +2,42 @@
   <div id="page-inner">
     <div class="row">
       <div class="col-md-12">
-        <h2><%= t ".title" %></h2>   
-        <h5><%= t ".panel_desc" %></h5>
-      </div>
-    </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h2><%= t ".panel_title" %></h2> 
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= form_for [:admin, @category], html: {multipart: true,
+              class: "form-horizontal style-form"} do |f| %>
+              <div class="form-group">
+                <%= f.label :name, class: "col-md-2 control-label" %>
+                <div class="col-md-10">
+                  <%= f.text_field :name, class: "form-control" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :description, class: "col-md-2 control-label" %>
+                <div class="col-md-10">
+                  <%= f.text_field :description, class: "form-control" %>
+                </div>
+              </div>
+              <hr/>
+              <p><%= t ".select_photo" %></p> 
+              <div class="form-group">
+                <div class="col-md-12">
+                  <%= f.file_field :picture %>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <%= f.submit class: "btn btn-success pull-right" %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+  
+
+
 

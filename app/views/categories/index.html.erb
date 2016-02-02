@@ -16,7 +16,7 @@
             <br>
             <%= cat.description%>
             <br>
-            <%= link_to t(".start"), lessons_path(category_id: cat.id), class: "btn btn-success" %>
+            <%= link_to t(".start"), lessons_path(category_id: cat.id), method: :post, class: "btn btn-success" %>
           </div>
         </div>
       <% else %>
