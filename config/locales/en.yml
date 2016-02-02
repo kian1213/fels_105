@@ -171,9 +171,19 @@ en:
     categories:
       index:
         title: Listing Categories
+        no_items_found: "SEARCH RESULT: THERE ARE NO CATEGORY ITEMS FOUND."
       show: 
         title: Category
       new:
         title: Add New Category
+        new_category: New Category
+        create_successful: New Category is added successfully!
+        create_invalid: Invalid input
+        select_photo: Select category photo
       edit:
         title: Edit the Category
+errors:
+  messages:
+    carrierwave_processing_error: 'Cannot resize image.'
+    carrierwave_integrity_error: 'Not an image.'
+    carrierwave_download_error: 'Couldn't download image.'
