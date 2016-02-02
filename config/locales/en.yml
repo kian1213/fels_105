@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      short: "%Y/%d/%m"
   layouts:
     application:
       app_title: Fels105 Framgia eLearning System
@@ -52,6 +55,7 @@ en:
       button_words: Words
       button_lessons: Lessons
       activities: Activities
+    signup:
       signup_welcome: Welcome to Framgia eLearning System
       signup_description: Free online learning, and a worldwide community of native-speaking language learners just like you. 
       signup_button: Free Language Learning - Sign up now!

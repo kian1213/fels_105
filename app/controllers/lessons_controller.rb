@@ -6,6 +6,7 @@ class LessonsController < ApplicationController
   def update
     @lesson = Lesson.find params[:id]
     if @lesson.update_attributes lesson_params
+      @lesson.create_activity
       flash.now[:success] = t ".finish"
       redirect_to result_path @lesson
     else

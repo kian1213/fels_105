@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token
 
   has_many :lessons, dependent: :destroy
+  has_many :activities, as: :log
 
   mount_uploader :avatar, AvatarUploader
   validates :first_name, presence: true, length: {maximum: 50}

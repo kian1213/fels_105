@@ -1,4 +1,7 @@
 class Lesson < ActiveRecord::Base
+  include ApplicationHelper
+
+  has_many :activities, as: :log
   has_many :lesson_words
   belongs_to :user
   belongs_to :category
@@ -11,6 +14,13 @@ class Lesson < ActiveRecord::Base
     @total_correct = lesson_words.select{|lesson_word|
       lesson_word.answer.correct? unless
       lesson_word.answer.nil?}.count
+  end
+
+  def create_activity
+    @activity = Activity.create log_id: self.user_id, log_type: "User",
+      content: "Learned #{self.total_correct_answer} words in
+      '#{self.category.name}' - #{datetime self.created_at}",
+      activity_type: "1"
   end
 
   private
