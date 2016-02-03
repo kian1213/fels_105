@@ -18,7 +18,6 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   account_activations:
     edit:
@@ -97,6 +96,9 @@ en:
       answers: List of answers
       users: List of users
   users:
+    index:
+      panel_title: User Index
+      title: All Users
     create:
       success: Welcome to Framgia eLearning System!
       info: Please check your email to activate your account.
@@ -108,6 +110,9 @@ en:
       panel_title: Panel
       button_words: Words
       button_lessons: Lessons
+  relationships:
+    index:
+      title: Following and Followers
   lessons:
     update:
       start: Lesson starts! Goodluck!
@@ -126,6 +131,10 @@ en:
       title: Sign in now
       remember: Remember me on this computer
       submit: Sign in
+  shared:
+    status:
+      followers: followers
+      following: following
   user_mailer:
     account_activation:
       subject: Account activation
