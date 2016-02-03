@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  account_activations:
+    edit:
+      valid: "Account Activated! Welcome"
   time:
     formats:
       short: "%Y/%d/%m"
