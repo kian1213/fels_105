@@ -3,7 +3,7 @@ class AccountActivationsController < ApplicationController
     user = User.find_by email: params[:email]
     if user && !user.activated? && user.authenticated?(:activation, params[:id])
       user.update_attributes activated: true, activated_at: Time.zone.now
-      log_in user
+      login user
       flash[:success] = t ".valid"
       redirect_to user
     else
