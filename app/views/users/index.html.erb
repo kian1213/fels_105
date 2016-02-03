@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= t ".panel_title" %>
+  </div>
+  <div class="panel-body">
+    <div class="row user-index">
+      <h1><%= t ".title" %></h1>
+      <%= will_paginate %>
+      <ul class="users">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

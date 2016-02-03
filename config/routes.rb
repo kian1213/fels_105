@@ -12,11 +12,16 @@ Rails.application.routes.draw do
   post    "login"       => "sessions#create"
   delete  "logout"      => "sessions#destroy"
 
-  resources :users
+  resources :users do
+    member do
+      resources :relationships, only: [:index]
+    end
+  end
   resources :categories
   resources :lessons
   resources :lesson_words
   resources :account_activations, only: [:edit]
+  resources :relationships,       only: [:create, :destroy]
 
   namespace :admin do
     root "dashboard#index"
