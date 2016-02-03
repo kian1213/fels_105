@@ -29,6 +29,15 @@ class Admin::CategoriesController < AdminController
     @category = Category.find params[:id]
   end
 
+  def update
+    @category = Category.find params[:id]
+    if @category.update_attributes category_params
+      redirect_to admin_categories_path
+    else
+      render :edit
+    end
+  end
+
   def show
     @category = Category.find params[:id]
   end
