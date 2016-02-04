@@ -2,6 +2,15 @@ ul {
   list-style-type: none;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
 .upper-margin {
   margin-top: 75px;
 }
@@ -106,4 +115,9 @@ ul {
 
 .user-index {
   margin-left: 80px !important;
+}
+
+.activity-content {
+  margin-left: 55px;
+  margin-bottom: 15px;
 }

@@ -29,6 +29,15 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def redirect_back_or default
+    redirect_to session[:forwarding_url] || default
+    session.delete :forwarding_url
+  end
+
+  def store_location
+    session[:forwarding_url] = request.url if request.get?
+  end
+
   def forget user
     user.forget
     cookies.delete :user_id

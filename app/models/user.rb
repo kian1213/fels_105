@@ -59,6 +59,13 @@ class User < ActiveRecord::Base
     UserMailer.account_activation(self).deliver_now
   end
 
+  def feeds
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE  follower_id = :user_id"
+    Activity.where("log_id IN (#{following_ids})
+      OR log_id = :user_id", user_id: id)
+  end
+
   def follow other_user
     active_relationships.create followed_id: other_user.id
   end

@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="row user-profile">
-          <%= link_to image_tag(@user.avatar, size: "150x150") %>
+          <%= link_to image_tag(@user.avatar, size: "150x150"), @user %>
         </div>
         <div class="row user-profile">
           <%= @user.full_name %>
@@ -26,9 +26,14 @@
           <ul>
             <% @activities.each do |activity| %>
               <li>
-                <%= activity_image_tag activity.id %>
-                <%= activity.content %>
+                <%= link_to image_tag(activity.log.avatar, size: "50x50"), activity.log %>
+                <%= link_to activity.log.full_name, activity.log %>
+                <div class="activity-content">
+                  <%= activity.content %>
+                </div>
               </li>
+              <hr>
+              <%= will_paginate @activities %>
             <% end %>
           </ul>
         </div>
