@@ -135,6 +135,7 @@ en:
     status:
       followers: followers
       following: following
+      total_words: Total Words Learned
     follow:
       follow: Follow
     unfollow:

@@ -10,15 +10,15 @@ class Lesson < ActiveRecord::Base
 
   after_create :generate_words
 
-  def total_correct_answer
+  def list_of_correct_answer
     @total_correct = lesson_words.select{|lesson_word|
       lesson_word.answer.correct? unless
-      lesson_word.answer.nil?}.count
+      lesson_word.answer.nil?}
   end
 
   def create_activity
     @activity = Activity.create log_id: self.user_id, log_type: "User",
-      content: "Learned #{self.total_correct_answer} words in
+      content: "Learned #{self.list_of_correct_answer.count} words in
       '#{self.category.name}' - #{datetime self.created_at}",
       activity_type: "1"
   end

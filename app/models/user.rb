@@ -60,10 +60,19 @@ class User < ActiveRecord::Base
   end
 
   def feeds
-    following_ids = "SELECT followed_id FROM relationships
-      WHERE  follower_id = :user_id"
-    Activity.where("log_id IN (#{following_ids})
-      OR log_id = :user_id", user_id: id)
+    following_ids = self.active_relationships.pluck :followed_id
+    following_ids << id
+    Activity.followed following_ids
+  end
+
+  def total_words_learned
+    @total_learned = []
+    lessons.map{|lesson|
+      lesson.list_of_correct_answer.map{|lesson_word|
+        @total_learned << lesson_word.word_id
+      }
+    }
+    @total_learned.uniq.count
   end
 
   def follow other_user

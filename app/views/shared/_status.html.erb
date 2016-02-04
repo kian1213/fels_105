@@ -1,4 +1,8 @@
 <% @user ||= current_user %>
+<div class="total-learned">
+  <%= t ".total_words" %>
+  <h3><b><%= @user.total_words_learned %></b></h3>
+</div>
 <a href="<%= relationships_path @user, type: 'following' %>">
   <strong id="following" class="stat">
     <%= @user.following.count %>

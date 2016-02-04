@@ -12,7 +12,7 @@
       <span><%= @lesson.category.name %></span>
       <h3><b><%= t ".result" %></b></h3>
       &nbsp;&nbsp;
-      <span><%= "#{@lesson.total_correct_answer}/20" %></span>
+      <span><%= "#{@lesson.list_of_correct_answer.count}/20" %></span>
     </div>
     <div>
       <%= image_tag current_user.avatar, size: "150x150", class: "result-avatar" %>
