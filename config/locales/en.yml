@@ -135,6 +135,10 @@ en:
     status:
       followers: followers
       following: following
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
   user_mailer:
     account_activation:
       subject: Account activation

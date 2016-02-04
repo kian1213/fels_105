@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      resources :relationships, only: [:index]
+      resources :relationships, only: [:index, :create, :destroy]
     end
   end
   resources :categories
