@@ -17,8 +17,4 @@ module ApplicationHelper
   def datetime date
     I18n.l date, format: :short
   end
-
-  def activity_image_tag id
-    image_tag User.find(id).avatar, size: "50x50"
-  end
 end
